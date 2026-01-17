@@ -8,12 +8,27 @@ import java.util.stream.Stream;
 
 public class main {
     public static void main(String[] args) throws IOException {
-        Stream<Movie> movies = new RemoteStore(MovieDeserializer::fromTsv).loadAll();
-        Histogram histogram = HistogramBuilder.with(movies).build(m -> (m.year() / 10) * 10);
-        System.out.println(histogram.size());
-        for (Integer bin: histogram){
-            System.out.println(bin + ":" + histogram.count(bin));
-        }
+        Display
+                .create()
+                .show(histogram())
+                .setVisible(true);
+    }
+
+    private static Histogram histogram() throws IOException {
+        Histogram histogram = HistogramBuilder.
+                with(movies()).
+                tittle("Histogram").
+                x("EJEX").
+                y("EJEY").
+                leyend("Movies").
+                build(m -> (m.year() / 10) * 10);
+        return histogram;
+    }
+
+    private static Stream<Movie> movies() throws IOException {
+        return new RemoteStore(MovieDeserializer::fromTsv)
+                .loadAll()
+                .limit(1000);
     }
 
 }

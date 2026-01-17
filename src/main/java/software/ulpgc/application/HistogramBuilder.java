@@ -17,27 +17,26 @@ public class HistogramBuilder {
     }
 
     private HistogramBuilder(Stream<Movie> movies) {
-        this.movies = movies;
-
+        this.movies = movies.filter(m-> m.year() >= 1900).filter(m-> m.year() <= 2026);
         this.labels = new HashMap<>();
     }
 
-    private HistogramBuilder tittle(String label){
+    public HistogramBuilder tittle(String label){
         labels.put("tittle", label);
         return this;
     }
 
-    private HistogramBuilder x(String label){
+    public HistogramBuilder x(String label){
         labels.put("x", label);
         return this;
     }
 
-    private HistogramBuilder y(String label){
+    public HistogramBuilder y(String label){
         labels.put("y", label);
         return this;
     }
 
-    private HistogramBuilder leyend(String label){
+    public HistogramBuilder leyend(String label){
         labels.put("leyend", label);
         return this;
     }
