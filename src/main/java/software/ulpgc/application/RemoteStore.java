@@ -1,5 +1,6 @@
-package software.ulpgc.architecture.io;
+package software.ulpgc.application;
 
+import software.ulpgc.architecture.io.Store;
 import software.ulpgc.architecture.model.Movie;
 
 import java.io.*;

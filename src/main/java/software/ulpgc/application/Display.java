@@ -3,9 +3,9 @@ package software.ulpgc.application;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartPanel;
 import org.jfree.chart.JFreeChart;
-import org.jfree.data.xy.IntervalXYDataset;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
+import software.ulpgc.architecture.viewmodel.Histogram;
 
 import javax.swing.*;
 import java.awt.*;

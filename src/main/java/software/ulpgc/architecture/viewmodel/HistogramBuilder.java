@@ -1,9 +1,8 @@
-package software.ulpgc.application;
+package software.ulpgc.architecture.viewmodel;
 
 import software.ulpgc.architecture.model.Movie;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import java.util.function.Function;
 import java.util.stream.Stream;

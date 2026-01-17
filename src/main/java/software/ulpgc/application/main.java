@@ -1,7 +1,8 @@
 package software.ulpgc.application;
 
-import software.ulpgc.architecture.io.RemoteStore;
 import software.ulpgc.architecture.model.Movie;
+import software.ulpgc.architecture.viewmodel.Histogram;
+import software.ulpgc.architecture.viewmodel.HistogramBuilder;
 
 import java.io.IOException;
 import java.util.stream.Stream;
